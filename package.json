@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.20.0",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.0.0",
+    "jimp": "^0.16.1",
+    "moment": "^2.28.0",
+    "moment-timezone": "^0.5.26",
+    "mongodb": "^3.3.2"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.809.0",
+    "nodemon": "^1.19.1",
+    "serverless": "^1.41.1",
+    "serverless-domain-manager": "^3.2.1",
+    "serverless-dotenv-plugin": "^2.0.1",
+    "serverless-offline": "^4.9.4",
+    "serverless-step-functions": "^2.27.1"
+  },
+  "scripts": {
+    "start": "nodemon -e js,yml --exec \"sls offline start\"",
+    "layer": "cp package.json layer/nodejs/package.json"
+  },
+  "author": "",
+  "license": "ISC"
+}
